@@ -1,23 +1,168 @@
 <!DOCTYPE html>
 
 <!--
-    Versión 0.1
+    Versión 0.2
     Integrantes:
      -> Evan Muñoz
       -> Nicolas Tamayo
        -> Jean Paul Gonzalez
-    Desc: Se incorpora el archivo .css al proyecto, junto con la creación de archivos para el primer commit.
+
+    Desc: Se incorporó lo siguiente:
+        -> Se ordenó el texto y se añadieron comentarios para la legibilidad de este mismo.
+        -> Fuentes Personalizadas y Favicon.
+        -> Se agregó un Flex.
+        -> Se agregó un NavBar.
+        -> Creación de Scripts para las Funcionalidades principales de la Página Web.
+        -> Creación de Clases Personalizadas en el .CSS
 -->
 
-<html lang="en">
+<html lang="es">
+
 <head>
+    <!-- Metas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Implementación BootStrap -->
+    <link href='https://fonts.googleapis.com/css?family=Tilt Neon' rel='stylesheet'> <!-- Fuente a Descargar -->
+    <link rel="icon" type="image/png" href="img/favicon.png"> <!-- Favicon de la Página -->
+
+    <!-- Otros -->
     <title>Proyecto HTML</title>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Prueba</h1>
+    <!-- Div Principal para manejo de Configuración Predeterminada para todo el Sitio -->
+    <div class="root-principal nunito-sans-1">
+
+        <!-- Flex | Anuncio de Oferta -->
+        <header class="site-header site-header-fuente" id="site-header-scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex p-2">
+                        <strong class="text-dark">¡Aprovecha Nuestros Descuentos! -> ¡35% DCTO En Las Entradas!</strong>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Fin Flex | Anuncio de Oferta -->
+
+        <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg" id="navbar-scrolleando">
+            <div class="container">
+
+                <!-- Logo 30x24 y Titulo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Titulo
+                </a>
+
+                <!-- Páginas -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto ubicacion-secciones-navbar">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Sobre Nosotros</a>
+                        </li>
+
+                        <!-- NavItem creado para separación -->
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"></a>
+                        </li>
+                        <!-- Fin NavItem creado para separación -->
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Torneos</a>
+                        </li>
+
+                        <!-- NavItem creado para separación -->
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"></a>
+                        </li>
+                        <!-- Fin NavItem creado para separación -->
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Premios</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botón Naranjo -->
+                    <a href="ticket.html">
+                        <button type="button" class="btn btn-warning">Comprar Entrada</button>
+                    </a>
+                </div>
+
+                </button>
+            </div>
+        </nav>
+        <!-- Fin NavBar -->
+
+    </div>
+    <!-- Aquí Finaliza el Div Root-Principal -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1>a</h1>
 </body>
+
+
+<!-- Scripts de Funcionalidades -->
+
+<!-- Script para mostrar el NavBar al Scrollear -->
+<script>
+    // Creamos la variable para almacenar el último Scroll
+    let lastScrollTop = 0;
+
+    // Añadimos el EventListener llamado "Scroll"
+    window.addEventListener("scroll", function () {
+
+        // Declaración de variables a utilizar
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        let navbar = document.getElementById("navbar-scrolleando"); // Elemento del navbar
+
+        // If Principal para determinar cuando agregar y cuando eliminar nuevas clases. //
+            // Scroll hacia abajo
+        if (currentScroll > lastScrollTop) {
+            document.getElementById("site-header-scroll").classList.add("headeris-hidden");
+            navbar.classList.add("fixed-top"); // Agrega la clase fixed-top al navbar
+            navbar.classList.add("navbar-scroll-bg"); // Agrega la clase para el fondo
+        }
+
+            // Scroll hacia arriba
+        else {
+            document.getElementById("site-header-scroll").classList.remove("headeris-hidden");
+            navbar.classList.remove("fixed-top"); // Quita la clase fixed-top del navbar
+            navbar.classList.remove("navbar-scroll-bg"); // Quita la clase para el fondo
+        }
+        // Fin If //
+
+        // Asigno el último scroll al actual, de esta forma estamos actualizados siempre al último Scroll //
+        lastScrollTop = currentScroll;
+    });
+</script>
+<!-- Fin Script para mostrar el NavBar al Scrollear-->
+
+<!-- Fin Scripts de Funcionalidades -->
+
 </html>

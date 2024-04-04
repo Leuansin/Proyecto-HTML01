@@ -1,0 +1,87 @@
+/* ----------------------------------------------------------------------------------
+                                    CSS Principal
+-------------------------------------------------------------------------------------*/
+
+/* Ajustes Predeterminados para Toda la Página. */
+.root-principal {
+    font-family: 'Tilt Neon';
+    font-size: 20px;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Principal
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Header
+-------------------------------------------------------------------------------------*/
+
+/* Color de Flex de Descuentos. */
+.site-header{
+    background-color: #ffcc00;
+}
+
+/* Fuente del Flex de Descuentos. */
+.site-header-fuente{
+    font-family: 'Tilt Neon';
+    font-size: 16px;
+}
+
+/* ID para manejar la transición del navbar al scrollear para abajo en la Página */
+#site-header-scroll {
+    transition: top 0.3s; /* Agregamos una transición suave para el cambio de posición */
+}
+  
+/* Estilo para ocultar el navbar */
+#site-header-scroll.headeris-hidden {
+    top: -100px; /* Mover el navbar fuera de la pantalla */
+}
+
+/* ----------------------------------------------------------------------------------
+                                    Fin CSS Header
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS NavBar
+-------------------------------------------------------------------------------------*/
+
+/* Fondo del NavBar al Scrollear para Abajo */
+.navbar-scroll-bg{
+    background-color: darkgray;
+}
+
+/* Color del Hover para el NavBar entero */
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Color del Hover para el NavBar */
+}
+
+/* Botón de Comprar Entrada. Utilizamos !Important para sobre-escribir en el .css de BootStrap. */
+.btn-warning{
+    --bs-btn-color: black !important;
+    --bs-btn-border-color: orange !important;
+    --bs-btn-hover-color: #fff !important;
+    --bs-btn-hover-bg: orange !important;
+    --bs-btn-hover-border-color: orange !important;
+    --bs-btn-focus-shadow-rgb: 255, 165, 0 !important;
+    --bs-btn-active-color: #fff !important;
+    --bs-btn-active-bg: orange !important;
+    --bs-btn-active-border-color: orange !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+    --bs-btn-disabled-color: orange !important;
+    --bs-btn-disabled-bg: transparent !important;
+    --bs-btn-disabled-border-color: orange !important;
+    --bs-gradient: none !important;
+}
+
+/* Creamos una clase especial para organizar las páginas(items) del NavBar */
+.ubicacion-secciones-navbar{
+    margin-right:10rem
+}
+/* Fin Clases */
+/* ----------------------------------------------------------------------------------
+                                    Fin CSS NavBar
+-------------------------------------------------------------------------------------*/
