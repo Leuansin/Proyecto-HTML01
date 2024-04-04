@@ -51,7 +51,7 @@
 
 /* Fondo del NavBar al Scrollear para Abajo */
 .navbar-scroll-bg{
-    background-color: darkgray;
+    background-color: orange;
 }
 
 /* Color del Hover para el NavBar entero */
@@ -81,7 +81,19 @@
 .ubicacion-secciones-navbar{
     margin-right:10rem
 }
-/* Fin Clases */
 /* ----------------------------------------------------------------------------------
                                     Fin CSS NavBar
+-------------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Carrusel
+-------------------------------------------------------------------------------------*/
+
+/* Texto al medio del Carrusel */
+.carousel-caption{
+    bottom: 40rem !important;
+}
+
+/* ----------------------------------------------------------------------------------
+                                    Fin CSS Carrusel
 -------------------------------------------------------------------------------------*/
