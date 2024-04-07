@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 
+<!-- TO DO:
+        -> Modificar Imágenes Slider 
+        -> Hacer Transparente el color del NavBar sin Fix-Top 
+        -> Añadir Favicon
+        -> Añadir Logo al NavBar 
+-->
+
 <!--
-    Versión 0.3
+    Versión 0.4
     Integrantes:
      -> Evan Muñoz
       -> Nicolas Tamayo
        -> Jean Paul Gonzalez
 
     Desc: Se incorporó lo siguiente:
-        -> Se modificó el color del NavBar al Scrollear.
-        -> Se agregó el Carrusel.
-        -> Se modificó la posición del texto del Carrusel.
+        -> Se agregó el Modal.
+        -> Se agregó el PopOver.
+        -> Se agregaron 3 Cards.
+        -> Se crearon varías clases para el CSS.
+        -> Se agregó una sección de Preguntas Frecuentes (FAQ).
+        -> Se agregó un Footer.
+        -> Se eliminó a Herobrine.
+
+    Pequeña Nota:
+
+        El footer por buenas costumbres siempre se hace afuera del Body.
+        Esta vez lo haremos aquí para utilizar la misma imágen de fondo.
+        De esta manera no utilizamos tantos recursos al cargar la página.
+
+    Esta excepción es netamente por optimización.
 -->
 
 <html lang="es">
@@ -43,52 +62,43 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <!-- Div Principal para manejo de Configuración Predeterminada para todo el Sitio -->
-    <div class="root-principal nunito-sans-1">
+<body class="modal-bg">
+    <!---------- Div Principal para manejo de Configuración Predeterminada para todo el Sitio ---------->
+    <div class="root-principal nunito-sans-1 bannerDIV">
 
-        <!-- Flex | Anuncio de Oferta -->
+        <!---------- Flex | Anuncio de Oferta ---------->
         <header class="site-header site-header-fuente" id="site-header-scroll">
             <div class="container">
                 <div class="row">
                     <div class="d-flex p-2">
-                        <strong class="text-dark">¡Aprovecha Nuestros Descuentos! -> ¡35% DCTO En Las Entradas!</strong>
+                        <strong class="texto-amarillo">¡Aprovecha Nuestros Descuentos! -> ¡35% DCTO En Las
+                            Entradas!</strong>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Fin Flex | Anuncio de Oferta -->
+        <!---------- Fin Flex | Anuncio de Oferta ---------->
 
-        <!-- NavBar -->
-        <nav class="navbar navbar-expand-lg" id="navbar-scrolleando">
+        <!---------- NavBar ---------->
+        <nav class="navbar navbar-expand-lg bannerDIV" id="navbar-scrolleando">
             <div class="container">
 
                 <!-- Logo 30x24 y Titulo -->
                 <a class="navbar-brand" href="index.html">
                     <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
                         class="d-inline-block align-text-top">
-                    Titulo
+                    <strong class="texto-amarillo">TorneosChile.cl</strong>
                 </a>
 
                 <!-- Páginas -->
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse texto-amarillo" id="navbarNav">
                     <ul class="navbar-nav ms-auto ubicacion-secciones-navbar">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Inicio</a>
+                            <a class="nav-link click-scroll" href="index.html">Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Sobre Nosotros</a>
-                        </li>
-
-                        <!-- NavItem creado para separación -->
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll"></a>
-                        </li>
-                        <!-- Fin NavItem creado para separación -->
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Torneos</a>
+                            <a class="nav-link click-scroll" href="nosotros.html">Sobre Nosotros</a>
                         </li>
 
                         <!-- NavItem creado para separación -->
@@ -98,26 +108,37 @@
                         <!-- Fin NavItem creado para separación -->
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Premios</a>
+                            <a class="nav-link click-scroll" href="torneos.html">Torneos</a>
+                        </li>
+
+                        <!-- NavItem creado para separación -->
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"></a>
+                        </li>
+                        <!-- Fin NavItem creado para separación -->
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="premios.html">Premios</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Contacto</a>
+                            <a class="nav-link click-scroll" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
 
                     <!-- Botón Naranjo -->
-                    <a href="ticket.html">
-                        <button type="button" class="btn btn-warning">Comprar Entrada</button>
+                    <a>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Comprar Entrada</button>
                     </a>
                 </div>
 
                 </button>
             </div>
         </nav>
-        <!-- Fin NavBar -->
+        <!---------- Fin NavBar ---------->
 
-        <!-- Carrusel -->
+        <!---------- Carrusel ---------->
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -127,14 +148,10 @@
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
+
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/1.jpeg" class="d-block w-100" alt="Slide 1">
-
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                    <img src="img/bg.webp" class="d-block w-100" alt="Slide 1">
                 </div>
 
                 <div class="carousel-item">
@@ -152,7 +169,6 @@
                         <p>Some representative placeholder content for the third slide.</p>
                     </div>
                 </div>
-
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -168,15 +184,269 @@
             </button>
 
         </div>
-        <!-- Fin Carrusel -->
+        <!---------- Fin Carrusel ---------->
+
+        <!---------- Modal ---------->
+        <div class="modal fade modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header modal-bg">
+                        <h1 class="modal-title fs-5 texto-amarillo" id="exampleModalLabel">¡Ups... 404!</h1>
+                        <button type="button" class="btn-close texto-amarillo" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-bg texto-amarillo">
+                        Lamentablemente, nuestro carrito de compras está experimentando un mantenimiento.<br><br> Dentro
+                        de poco
+                        volverá a la normalidad.
+                    </div>
+                    <div class="modal-footer modal-bg">
+                        <button type="button" class="btn btn-secondary modal-bg"
+                            data-bs-dismiss="modal">¡Entendido!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------- Fin Modal ---------->
+
+        <!---------- Inicio Sección Torneos ---------->
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
+
+        <!-- Titulo de Torneos -->
+        <h1 class="texto-amarillo" style="text-align: center;">Próximos Torneos</h1>
+        <!-- Fin Titulo de Torneos -->
+
+        <!-- Separador entre Cards -->
+        <div class="SeparadorCards">
+            <!-- Usamos un carácter invisible para hacer el espaciado. -->
+            ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        </div>
+        <!-- Fin Separador entre Cards -->
+
+        <!-- Card -->
+        <div class="card" style="width: 18rem; text-align: center; float: left;">
+            <img src="img/RLBG.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body modal-bg texto-amarillo">
+                <h4 class="card-title">Rocket League</h4>
+
+                <!-- Separador para estética -->
+                <hr class="separador-2">
+
+                <h5 class="card-text" style="font-size: medium;">¡Participa de este torneo 2v2!<br><br>¡Los Equipos se
+                    enfrentarán para determinar
+                    al mejor! </h5>
+            </div>
+
+            <ul class="list-group list-group-flush modal-bg texto-amarillo" style="text-align:center !important;">
+                <li class="list-group-item modal-bg texto-amarillo">17 de Abril</li>
+                <li class="list-group-item modal-bg texto-amarillo">Trofeo Físico</li>
+                <li class="list-group-item modal-bg texto-amarillo">16 Equipos</li>
+            </ul>
+
+            <div class="card-body modal-bg">
+                <a href="#" class="card-link">Inscribirse</a>
+                <a href="#" class="card-link">Ver Premios</a>
+            </div>
+        </div>
+        <!-- Fin Card -->
+
+        <!-- Separador entre Cards -->
+        <div class="SeparadorCards">
+            <hr class="separador">ㅤㅤ <!-- Usamos un carácter invisible para hacer el espaciado. -->
+        </div>
+        <!-- Fin Separador entre Cards -->
+
+        <!-- Card -->
+        <div class="card" style="width: 18rem; text-align: center; float: left;">
+            <img src="img/PZBG.png" class="card-img-top" alt="286x95"> <!-- 286x95 -->
+            <div class="card-body modal-bg texto-amarillo">
+                <h4 class="card-title">Project Zomboid</h4>
+
+                <!-- Separador para estética -->
+                <hr class="separador-2">
+
+                <h5 class="card-text" style="font-size: medium;">¡Sé el último en Pie!<br><br>¡Los Supervivientes se
+                    enfrentarán para determinar
+                    al mejor! </h5>
+            </div>
+
+            <ul class="list-group list-group-flush modal-bg texto-amarillo" style="text-align:center !important;">
+                <li class="list-group-item modal-bg texto-amarillo">24 de Abril</li>
+                <li class="list-group-item modal-bg texto-amarillo">Trofeo Físico</li>
+                <li class="list-group-item modal-bg texto-amarillo">32 Supervivientes</li>
+            </ul>
+            <div class="card-body modal-bg">
+                <a href="#" class="card-link">Inscribirse</a>
+                <a href="#" class="card-link">Ver Premios</a>
+            </div>
+        </div>
+        <!-- Fin Card2 -->
+
+        <!-- Separador entre Cards -->
+        <div class="SeparadorCards" style="float: left;">
+            <hr class="separador">ㅤㅤ <!-- Usamos un carácter invisible para hacer el espaciado. -->
+        </div>
+        <!-- Fin Separador entre Cards -->
+
+        <!-- Card3 -->
+        <div class="card" style="width: 18rem; text-align: center;">
+            <img src="img/TLDBG.jpg" class="card-img-top" alt="...">
+            <div class="card-body modal-bg texto-amarillo">
+                <h4 class="card-title">The Long Dark</h4>
+
+                <!-- Separador para estética -->
+                <hr class="separador-2">
+
+                <h5 class="card-text" style="font-size: medium;">¡Sé el último en sobrevivir!<br><br>¡Los Supervivientes
+                    se
+                    enfrentarán para determinar
+                    al mejor! </h5>
+            </div>
+
+            <ul class="list-group list-group-flush modal-bg texto-amarillo" style="text-align:center !important;">
+                <li class="list-group-item modal-bg texto-amarillo">29 de Abril</li>
+                <li class="list-group-item modal-bg texto-amarillo">Trofeo Físico</li>
+                <li class="list-group-item modal-bg texto-amarillo">50 Supervivientes</li>
+            </ul>
+            <div class="card-body modal-bg">
+                <a href="#" class="card-link">Inscribirse</a>
+                <a href="#" class="card-link">Ver Premios</a>
+            </div>
+        </div>
+        <!-- Fin Card3 -->
+        <!-------- Fin Sección Torneos-------->
+
+
+        <!---------- Inicio Sección FAQ ---------->
+
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
+
+        <!-- Preguntas Frecuentes (FAQ) -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header texto-amarillo" style="text-align: center;">Preguntas Frecuentes
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ¿Cuales son las Reglas de los Torneos?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo">Placeholder content for this accordion, which is
+                        intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                        accordion body.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Cómo funciona la entrega de premios?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo">Placeholder content for this accordion, which is
+                        intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                        accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        ¿Puedo cambiar compañero una vez inscrito?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo">Placeholder content for this accordion, which is
+                        intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                        accordion body. Nothing more exciting happening here in terms of content, but just filling up
+                        the space to make it look, at least at first glance, a bit more representative of how this would
+                        look in a real-world application.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Cómo funciona la entrega de premios?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo">Placeholder content for this accordion, which is
+                        intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                        accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Cómo funciona la entrega de premios?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo">Placeholder content for this accordion, which is
+                        intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                        accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-------- Fin Sección FAQ -------->
+
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
+
+
+        <!-------- Inicio Footer -------->
+        <footer>
+            <!-- Separador entre Cards -->
+            <div class="SeparadorCards">
+                ㅤㅤ <!-- Usamos un carácter invisible para hacer el espaciado. -->
+            </div>
+            <!-- Fin Separador entre Cards -->
+
+            <!-- Logo Footer 100x100 -->
+            <li class="list-group-item" style="color: white; float: right;"><img class="footer-img"
+                    src="img/1.jpeg">ㅤ</img></li>
+            <!-- Fin Logo Footer -->
+
+            <!-- Redireccionamientos -->
+            <h2 class="texto-amarillo">TorneosChile.cl</h2>
+
+            <!-- Al usar el "onclick" utilizamos JavaScript para redireccionar, se hace de esta forma ya que el <a> queda mal estéticamente-->
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'index.html';">ㅤㅤInicio</span></li>
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'nosotros.html';">ㅤㅤSobre Nosotros</span></li>
+
+            <!-- Excepción -->
+            <li class="list-group-item texto-amarillo" style="color: white; float: right;">TorneosChile.clㅤ</li>
+            <!-- Titulo Bajo Logo-->
+            <!-- Fin Excepción -->
+
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'torneos.html';">ㅤㅤTorneos</span></li>
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'contacto.html';">ㅤㅤContácto</span></li>
+            <!-- Fin Redireccionamientos -->
+
+        </footer>
+        <!-------- Fin Footer -------->
+
     </div>
-    <!-- Aquí Finaliza el Div Root-Principal -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>a</h1>
+    <!---------- Aquí Finaliza el Div Root-Principal ---------->
 </body>
 
-
-<!-- Scripts de Funcionalidades -->
+<!---------- Scripts de Funcionalidades ---------->
 
 <!-- Script para mostrar el NavBar al Scrollear -->
 <script>
@@ -212,6 +482,6 @@
 </script>
 <!-- Fin Script para mostrar el NavBar al Scrollear-->
 
-<!-- Fin Scripts de Funcionalidades -->
+<!---------- Fin Scripts de Funcionalidades ---------->
 
 </html>

@@ -1,11 +1,48 @@
 /* ----------------------------------------------------------------------------------
                                     CSS Principal
 -------------------------------------------------------------------------------------*/
-
 /* Ajustes Predeterminados para Toda la Página. */
 .root-principal {
     font-family: 'Tilt Neon';
     font-size: 20px;
+}
+
+/* Creamos la clase Ocultar, para efectos estéticos. */
+.ocultar{
+    display: none !important;
+}
+
+/* Separador estético para distinguir entre Divs. */
+hr.separador {
+    background-color: #ffcc00;
+    border-top: 8px solid #ffcc00;
+    border-radius: 5px;
+    border-color: #ffcc00;
+}
+
+/* Separador estético en el Card. */
+hr.separador-2 {
+    background-color: white;
+    border-top: 8px solid white;
+    border-radius: 5px;
+    border-color: white;
+}
+
+/* Fondo de los Divs. */
+.bannerDIV {
+    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920');
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+/* Hacemos el texto blanco para mayor legibilidad. */
+.texto-amarillo {
+    color: #ffcc00 !important;
+}
+
+/* Cubrimos el <a>. */
+.texto-amarillo a{
+    color: #ffcc00 !important;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -19,24 +56,28 @@
 -------------------------------------------------------------------------------------*/
 
 /* Color de Flex de Descuentos. */
-.site-header{
-    background-color: #ffcc00;
+.site-header {
+    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Fuente del Flex de Descuentos. */
-.site-header-fuente{
+.site-header-fuente {
     font-family: 'Tilt Neon';
     font-size: 16px;
 }
 
 /* ID para manejar la transición del navbar al scrollear para abajo en la Página */
 #site-header-scroll {
-    transition: top 0.3s; /* Agregamos una transición suave para el cambio de posición */
+    transition: top 0.3s;
+    /* Agregamos una transición suave para el cambio de posición */
 }
-  
+
 /* Estilo para ocultar el navbar */
 #site-header-scroll.headeris-hidden {
-    top: -100px; /* Mover el navbar fuera de la pantalla */
+    top: -100px;
+    /* Mover el navbar fuera de la pantalla */
 }
 
 /* ----------------------------------------------------------------------------------
@@ -50,17 +91,18 @@
 -------------------------------------------------------------------------------------*/
 
 /* Fondo del NavBar al Scrollear para Abajo */
-.navbar-scroll-bg{
+.navbar-scroll-bg {
     background-color: orange;
 }
 
 /* Color del Hover para el NavBar entero */
 .navbar-nav .nav-link:hover {
-    color: #ffcc00; /* Color del Hover para el NavBar */
+    color: #ffcc00;
+    /* Color del Hover para el NavBar */
 }
 
 /* Botón de Comprar Entrada. Utilizamos !Important para sobre-escribir en el .css de BootStrap. */
-.btn-warning{
+.btn-warning {
     --bs-btn-color: black !important;
     --bs-btn-border-color: orange !important;
     --bs-btn-hover-color: #fff !important;
@@ -78,22 +120,106 @@
 }
 
 /* Creamos una clase especial para organizar las páginas(items) del NavBar */
-.ubicacion-secciones-navbar{
-    margin-right:10rem
+.ubicacion-secciones-navbar {
+    margin-right: 10rem
 }
+
 /* ----------------------------------------------------------------------------------
                                     Fin CSS NavBar
 -------------------------------------------------------------------------------------*/
+
+
 
 /* ----------------------------------------------------------------------------------
                                     CSS Carrusel
 -------------------------------------------------------------------------------------*/
 
 /* Texto al medio del Carrusel */
-.carousel-caption{
+.carousel-caption {
     bottom: 40rem !important;
 }
 
 /* ----------------------------------------------------------------------------------
                                     Fin CSS Carrusel
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Modal
+-------------------------------------------------------------------------------------*/
+
+/* Texto al medio del Carrusel */
+.modal-bg{
+    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/* Cambiamos el background de los Botones */
+.btn-bg{
+    color: #ffcc00 !important;
+    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Modal
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Cards
+-------------------------------------------------------------------------------------*/
+
+/* Creamos una clase que ubique el siguiente div a la izquierda y esté centrado */
+.SeparadorCards{
+    float: left !important;
+    text-align: center !important;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Cards
+-------------------------------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------------------------
+                                     CSS FAQ
+-------------------------------------------------------------------------------------*/
+
+/* Clases creadas para cambiar el Background del Acordeón */
+.accordion-header{
+    background-color: #1e2648 !important;
+}
+
+.accordion-body {
+    background-color: #1e2648 !important;
+}
+
+.accordion-button{
+    background-color: #1e2648 !important;
+}
+/* Fin Clases creadas para cambiar el Background del Acordeón */
+
+/* ----------------------------------------------------------------------------------
+                                     Fin CSS FAQ
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Footer
+-------------------------------------------------------------------------------------*/
+
+/* Establecemos un tamaño predefinido a la imágen del Footer */
+.footer-img{
+    width: 100px;
+    height: 100px;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Footer
 -------------------------------------------------------------------------------------*/
