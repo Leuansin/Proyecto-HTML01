@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<!--
+    Versión 0.1
+    Integrantes:
+     -> Evan Muñoz
+      -> Nicolas Tamayo
+       -> Jean Paul Gonzalez
+
+    Desc: Se incorporó lo siguiente:
+        -> Se eliminó una Sección, dejando solamente la sección de Torneos.
+        -> Se eliminó un separador innecesario arriba del titulo.
+-->
+<html lang="es">
+
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Implementación BootStrap -->
+    <link href='https://fonts.googleapis.com/css?family=Tilt Neon' rel='stylesheet'> <!-- Fuente a Descargar -->
+    <link rel="icon" type="image/png" href="img/favicon.png"> <!-- Favicon de la Página -->
+
+    <!-- Otros -->
+    <title>TorneosChile.cl </title>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="modal-bg">
+    <!---------- Div Principal para manejo de Configuración Predeterminada para todo el Sitio ---------->
+    <div class="root-principal nunito-sans-1 bannerDIV">
+
+        <!---------- Flex | Anuncio de Oferta ---------->
+        <header class="site-header site-header-fuente" id="site-header-scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex p-2">
+                        <strong class="texto-amarillo">¡Aprovecha Nuestros Descuentos! -> ¡35% DCTO En Las
+                            Entradas!
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!---------- Fin Flex | Anuncio de Oferta ---------->
+
+        <!---------- NavBar ---------->
+        <nav class="navbar navbar-expand-lg" id="navbar-scrolleando">
+            <div class="container">
+
+                <!-- Logo 30x24 y Titulo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    <strong class="texto-amarillo">TorneosChile.cl</strong>
+                </a>
+
+                <!-- Páginas -->
+                <div class="collapse navbar-collapse texto-amarillo" id="navbarNav">
+                    <ul class="navbar-nav ms-auto ubicacion-secciones-navbar">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="nosotros.html">Sobre Nosotros</a>
+                        </li>
+
+                        <!-- NavItem creado para separación -->
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"></a>
+                        </li>
+                        <!-- Fin NavItem creado para separación -->
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="app.html">Instala la APP</a>
+                        </li>
+
+                        <!-- NavItem creado para separación -->
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"></a>
+                        </li>
+                        <!-- Fin NavItem creado para separación -->
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="torneos.html">Torneos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botón Naranjo -->
+                    <a>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Comprar Entrada</button>
+                    </a>
+                </div>
+
+                </button>
+            </div>
+        </nav>
+        <!---------- Fin NavBar ---------->
+
+        <br>
+
+        <!---------- Modal ---------->
+        <div class="modal fade modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header modal-bg">
+                        <h1 class="modal-title fs-5 texto-amarillo" id="exampleModalLabel">¡Ups... 404!</h1>
+                        <button type="button" class="btn-close texto-amarillo" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-bg texto-amarillo">
+                        Lamentablemente, nuestro carrito de compras está experimentando un mantenimiento.<br><br> Dentro
+                        de poco
+                        volverá a la normalidad.
+                    </div>
+                    <div class="modal-footer modal-bg">
+                        <button type="button" class="btn btn-secondary modal-bg"
+                            data-bs-dismiss="modal">¡Entendido!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------- Fin Modal ---------->
+
+        <!---------- Inicio Sección Torneos ---------->
+
+        <!-- Titulo de Torneos -->
+        <h1 class="texto-amarillo" style="text-align: center;">Próximos Torneos</h1>
+        <!-- Fin Titulo de Torneos -->
+
+        <!-- Separador entre Cards -->
+        <div class="SeparadorCards">
+            <!-- Usamos un carácter invisible para hacer el espaciado. -->
+            ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        </div>
+        <!-- Fin Separador entre Cards -->
+
+        <!-- Card -->
+        <div class="card" style="width: 18rem; text-align: center; float: left;">
+            <img src="img/RLBG.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body modal-bg texto-amarillo">
+                <h4 class="card-title">Rocket League</h4>
+
+                <!-- Separador para estética -->
+                <hr class="separador-2">
+
+                <h5 class="card-text" style="font-size: medium;">¡Participa de este torneo 2v2!<br><br>¡Los Equipos se
+                    enfrentarán para determinar
+                    al mejor! </h5>
+            </div>
+
+            <ul class="list-group list-group-flush modal-bg texto-amarillo" style="text-align:center !important;">
+                <li class="list-group-item modal-bg texto-amarillo">17 de Abril</li>
+                <li class="list-group-item modal-bg texto-amarillo">Trofeo Físico</li>
+                <li class="list-group-item modal-bg texto-amarillo">16 Equipos</li>
+            </ul>
+
+            <div class="card-body modal-bg">
+                <a href="#" class="card-link">Inscribirse</a>
+                <a href="#" class="card-link">Ver Premios</a>
+            </div>
+        </div>
+        <!-- Fin Card -->
+
+        <!-- Separador entre Cards -->
+        <div class="SeparadorCards">
+            <hr class="separador">ㅤㅤ <!-- Usamos un carácter invisible para hacer el espaciado. -->
+        </div>
+        <!-- Fin Separador entre Cards -->
+
+        <!-- Card -->
+        <div class="card" style="width: 18rem; text-align: center; float: left;">
+            <img src="img/PZBG.png" class="card-img-top" alt="286x95"> <!-- 286x95 -->
+            <div class="card-body modal-bg texto-amarillo">
+                <h4 class="card-title">Project Zomboid</h4>
+
+                <!-- Separador para estética -->
+                <hr class="separador-2">
+
+                <h5 class="card-text" style="font-size: medium;">¡Sé el último en Pie!<br><br>¡Los Supervivientes se
+                    enfrentarán para determinar
+                    al mejor! </h5>
+            </div>
+
+            <ul class="list-group list-group-flush modal-bg texto-amarillo" style="text-align:center !important;">
+                <li class="list-group-item modal-bg texto-amarillo">24 de Abril</li>
+                <li class="list-group-item modal-bg texto-amarillo">Trofeo Físico</li>
+                <li class="list-group-item modal-bg texto-amarillo">32 Supervivientes</li>
+            </ul>
+            <div class="card-body modal-bg">
+                <a href="#" class="card-link">Inscribirse</a>
+                <a href="#" class="card-link">Ver Premios</a>
+            </div>
+        </div>
+        <!-- Fin Card2 -->
+
+        <!-- Separador entre Cards -->
+        <div class="SeparadorCards" style="float: left;">
+            <hr class="separador">ㅤㅤ <!-- Usamos un carácter invisible para hacer el espaciado. -->
+        </div>
+        <!-- Fin Separador entre Cards -->
+
+        <!-- Card3 -->
+        <div class="card" style="width: 18rem; text-align: center;">
+            <img src="img/TLDBG.jpg" class="card-img-top" alt="...">
+            <div class="card-body modal-bg texto-amarillo">
+                <h4 class="card-title">The Long Dark</h4>
+
+                <!-- Separador para estética -->
+                <hr class="separador-2">
+
+                <h5 class="card-text" style="font-size: medium;">¡Sé el último en sobrevivir!<br><br>¡Los Supervivientes
+                    se
+                    enfrentarán para determinar
+                    al mejor! </h5>
+            </div>
+
+            <ul class="list-group list-group-flush modal-bg texto-amarillo" style="text-align:center !important;">
+                <li class="list-group-item modal-bg texto-amarillo">29 de Abril</li>
+                <li class="list-group-item modal-bg texto-amarillo">Trofeo Físico</li>
+                <li class="list-group-item modal-bg texto-amarillo">50 Supervivientes</li>
+            </ul>
+            <div class="card-body modal-bg">
+                <a href="#" class="card-link">Inscribirse</a>
+                <a href="#" class="card-link">Ver Premios</a>
+            </div>
+        </div>
+        <!-- Fin Card3 -->
+        <!-------- Fin Sección Torneos-------->
+
+
+        <!---------- Inicio Sección FAQ ---------->
+
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
+
+        <!-- Preguntas Frecuentes (FAQ) -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header texto-amarillo" style="text-align: center;">Preguntas Frecuentes
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ¿Se pueden vender las Entradas Gratis obtenidas?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo" style="font-size: 14px;">Sí, se pueden vender las Entradas Gratis obtenidas como premio al ganar un torneo.
+                        <br><br>Si deseas venderla rápido, puedes venderla al <code>Staff</code> de <code>TorneosChile</code>.
+                        <br> este te la comprará por un <code>50%</code> del precio de la entrada original.
+                        <br><br> En caso de cualquier imprevisto, te recomendamos tener guardada la boleta/imágen al realizar la venta de la entrada a otro Usuario.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Donde ver los Torneos que se realizan en vivo?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo" style="font-size: 14px;">Puedes presenciar los Torneos que se estén realizando en <code>Vivo</code> buscando a nuestros streamers oficiales.
+                        <br><br> Streamers Oficiales:
+                        <br><code><a style="color: magenta !important;" href="https://www.youtube.com/@luisgamingg">LuisGaminG</a></code>
+                        <br><br> ¿Eres un <<code>Streamer</code>>?
+                        <br> Estamos buscando siempre nuevos streamers para patrocinar. 
+                        <br><br> ¡Únete enviando tu información en la sección de Contácto!</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        ¿Cómo funciona la entrega de los premios?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo" style="font-size: 14px;">La entrega de premios se realiza medianteㅤ
+                        <code>Transferencia Bancaria</code>.
+                        <br><br> Se solicitarán los datos correspondiente al ㅤ<code>Ganador del Torneo</code>.
+                        <br>(En caso de ser un equipo el ganador, se le retribuirá a los participantes por separado).
+                        <br><br> Si es que existen gastos por comisiones al transferir entre bancos, se restará del monto final a entregar.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    ¿Cuales son las Reglas de cada Torneos?
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo" style="font-size: 14px;">Las reglas de cada Torneo varían bastante.<br><br>Sin embargo, contamos con un template de <code>Reglas Básicas</code>, que generalmente siempre aparecen en la lista de Reglas de cada Torneo.
+                        <br>1.- No se permite el uso de Cheats / Software de Terceros
+                        <br>2.- No se permite la alianza entre equipos para arreglar un Ganador.
+                        <br>3.- No se permiten Reembolsos una vez iniciado el Torneo
+                        <br>4.- Si un integrante del Equipo es descalificado, el Equipo es Descalificado instantaneamente.
+                        <br>5.- Si un integrante del Equipo no puede recibir el premio, se le entregará al Lider del Equipo y el verá como se reparte.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Cómo funcionan los Premios Físicos?
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo" style="font-size: 14px;">Losㅤ<code>Premios Físicos</code>, como su nombre lo dice.
+                    Son Trofeos Físicos, mandados a hacer manualmente una vez el torneo finaliza.
+                    <br>
+                    <br>Estos poseerán lo siguiente:
+                    <br>-> Nick de Usuario del(os) participante(s)
+                    <br>-> Fecha en la que se ganó el torneo
+                    <br><br>En caso de ser un Equipo que gane el Torneo, el Trofeo Físico pasará a ser una Medalla y se enviará una individual a cada participante.
+                    <br><br>(ESTO NO APLICA A TORNEOS GRANDES, EL TROFEO GANADO DE TORNEOS GRANDES ES MUY DIFERENTE A LOS OTROS Y SE ENVÍA A CADA PARTICIPANTE DEL EQUIPO GANADOR.)</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed texto-amarillo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Puedo obtener un Reembolso?
+                    </button>
+                </h2>
+                <div id="flush-collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body modal-bg texto-amarillo" style="font-size: 14px;">Sí, puedes obtener un <code>Reembolso</code> de tu Inscripción a los Torneos.
+                    <br><br>Siempre y cuando, este NO esté a menos de 48 horas de empezar.
+                    <br>(Esto se hace para evitar imparidad en las llaves de grupo).
+                    <br><br>Si deseas obtener un <code>Reembolso</code>, favor contáctate inmediatamente con nosotros.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-------- Fin Sección FAQ -------->
+
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
+
+
+        <!-------- Inicio Footer -------->
+        <footer>
+            <!-- Separador entre Cards -->
+            <div class="SeparadorCards">
+                ㅤㅤ <!-- Usamos un carácter invisible para hacer el espaciado. -->
+            </div>
+            <!-- Fin Separador entre Cards -->
+
+            <!-- Logo Footer 100x100 -->
+            <li class="list-group-item" style="color: white; float: right;"><img class="footer-img"
+                    src="img/1.jpeg">ㅤ</img></li>
+            <!-- Fin Logo Footer -->
+
+            <!-- Redireccionamientos -->
+            <h2 class="texto-amarillo">TorneosChile.cl</h2>
+
+            <!-- Al usar el "onclick" utilizamos JavaScript para redireccionar, se hace de esta forma ya que el <a> queda mal estéticamente-->
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'index.html';">ㅤㅤInicio</span></li>
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'nosotros.html';">ㅤㅤSobre Nosotros</span></li>
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'torneos.html';">ㅤㅤTorneos</span></li>
+            <li class="list-group-item" style="color: white;"><span
+                    onclick="window.location.href = 'contacto.html';">ㅤㅤContácto</span></li>
+            <!-- Fin Redireccionamientos -->
+
+        </footer>
+        <!-------- Fin Footer -------->
+
+    </div>
+    <!---------- Aquí Finaliza el Div Root-Principal ---------->
+</body>
+
+<!---------- Scripts de Funcionalidades ---------->
+
+<!-- Script para mostrar el NavBar al Scrollear -->
+<script>
+    // Creamos la variable para almacenar el último Scroll
+    let lastScrollTop = 0;
+
+    // Añadimos el EventListener llamado "Scroll"
+    window.addEventListener("scroll", function () {
+
+        // Declaración de variables a utilizar
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        let navbar = document.getElementById("navbar-scrolleando"); // Elemento del navbar
+
+        // If Principal para determinar cuando agregar y cuando eliminar nuevas clases. //
+        // Scroll hacia abajo
+        if (currentScroll > lastScrollTop) {
+            document.getElementById("site-header-scroll").classList.add("headeris-hidden");
+            navbar.classList.add("fixed-top"); // Agrega la clase fixed-top al navbar
+            navbar.classList.add("navbar-scroll-bg"); // Agrega la clase para el fondo
+        }
+
+        // Scroll hacia arriba
+        else {
+            document.getElementById("site-header-scroll").classList.remove("headeris-hidden");
+            navbar.classList.remove("fixed-top"); // Quita la clase fixed-top del navbar
+            navbar.classList.remove("navbar-scroll-bg"); // Quita la clase para el fondo
+        }
+        // Fin If //
+
+        // Asigno el último scroll al actual, de esta forma estamos actualizados siempre al último Scroll //
+        lastScrollTop = currentScroll;
+    });
+</script>
+<!-- Fin Script para mostrar el NavBar al Scrollear-->
+
+<!---------- Fin Scripts de Funcionalidades ---------->
+
+</html>
