@@ -451,6 +451,17 @@
 
 <!---------- Scripts de Funcionalidades ---------->
 
+<!-- Script para Automatizar el LazyLoading -->
+<script>
+    // Seleccionar todas las imágenes en la página
+    var imagenes = document.querySelectorAll('img');
+
+    // Recorrer todas las imágenes y agregar el atributo loading="lazy"
+    imagenes.forEach(function (img) {
+        img.setAttribute('loading', 'lazy');
+    });
+</script>
+
 <!-- Script para mostrar el NavBar al Scrollear -->
 <script>
     // Creamos la variable para almacenar el último Scroll
