@@ -9,9 +9,9 @@ Presentamos el Proyecto:
 En este proyecto se crea una Página Web completamente en `HTML, CSS y JS`.
 
 Cumpliendo con todos los requisitos solicitados por la Rúbrica de Evaluación.
- ![image](https://user-images.githubusercontent.com/17109060/32149040-04f3125c-bd25-11e7-8003-66fd29bc18d4.png)
+ ![image](https://i.imgur.com/pxOoVSo.png)
 
-*Este proyecto fue elevado a una escala de profesionalismo y calidad bastante superior a la solicitada.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+*Este proyecto fue elevado a una escala de profesionalismo y calidad bastante superior a la solicitada.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
 Todo esto se debe a que se planea utilizar el proyecto para un emprendimiento real. [Ver Página Web](https://torneoschile.cl).*
 
 # Tabla de Contenidos
