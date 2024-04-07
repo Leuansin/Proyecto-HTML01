@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 
-<!-- TO DO:
-        -> Modificar Imágenes Slider 
-        -> Añadir Favicon
-        -> Añadir Logo al NavBar
-        -> Crear las 4 Vistas Restantes
-        -> En una de las 4 Vistas, implementar una PWA para tener APP Móvil.
--->
-
 <!--
-    Versión 0.5
+    Versión 0.1
     Integrantes:
      -> Evan Muñoz
       -> Nicolas Tamayo
        -> Jean Paul Gonzalez
 
     Desc: Se incorporó lo siguiente:
-        -> Se modificó el CSS del Flex y NavBar.
-        -> Se arregló un bug en el FAQ.
-        -> Se editó el texto del FAQ.
-        -> Se eliminó a Herobrine.
+        -> Se agregó un Stretched Link para hacer la estética.
+        -> Se agregó Información sobre la página.
 -->
 
 <html lang="es">
@@ -129,53 +119,54 @@
         </nav>
         <!---------- Fin NavBar ---------->
 
-        <!---------- Carrusel ---------->
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+        <br>
+
+        <!---------- Sobre Nosotros ---------->
+        <h1 class="texto-amarillo" style="text-align: center;">Sobre Nosotros</h1>
+        <div class="row g-0 bg-body-secondary position-relative modal-bg">
+            <div class="col-md-6 mb-md-0 p-md-4">
+                ㅤㅤㅤㅤㅤㅤㅤ<img src="img/nosotros/calidad.png" class="nosotros-img" alt="Calidadi">
             </div>
+            <div class="col-md-6 p-4 ps-md-0">
+              <h5 class="mt-0 texto-amarillo">Profesionalismo y Calidad</h5>
+              <p class="texto-amarillo" style="font-size: 14px;">TorneosChile.cl toma orgullo en realizar únicamente Torneos de alta Profesionalidad y extrema Calidad.
+             <br>Todo viene incluido con una planificación de por medio y nada se deja al azar.
+             <br>Por esta misma razón, nuestros torneos son tan famosos entre los jugadores competitivos.</div>
+          </div>
+          
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/bg.webp" class="d-block w-100" alt="Slide 1">
-                </div>
+          <div class="row g-0 bg-body-secondary position-relative modal-bg">
+            <div class="col-md-6 p-4 ps-md-0">
+                <h5 class="mt-0 texto-amarillo">ㅤTorneos Grandes</h5>
+                <p class="texto-amarillo" style="font-size: 14px;">ㅤ De vez en cuando, realizamos TORNEOS GRANDES.
+                    <br>ㅤ Los cuales son torneos másivos, donde el pozo y los premios son bastante grandes.
+                    <br>ㅤ La competitividad y talento abunda en los jugadores de estos Torneos, ya que generalmente viene
+                    <br>ㅤ incluido un trofeo físico bastante destacado en conjunto a una gran suma de dinero.</div>
 
-                <div class="carousel-item">
-                    <img src="img/2.jpeg" class="d-block w-100" alt="Slide 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="img/3.jpeg" class="d-block w-100" alt="Slide 3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
+            <div class="col-md-6 mb-md-0 p-md-4">
+                <br>ㅤㅤㅤㅤㅤ<img src="img/nosotros/torneos.png" class="nosotros-img" alt="Torneos">
             </div>
+          </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
+        <!-- Creamos un separador con una línea dibujada en CSS, para efectos estéticos -->
+        <hr class="separador">
+        <!-- Fin Separador -->
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-
-        </div>
-        <!---------- Fin Carrusel ---------->
+        <div class="row g-0 bg-body-secondary position-relative modal-bg">
+            <div class="col-md-6 mb-md-0 p-md-4">
+               <br>ㅤㅤㅤㅤㅤㅤㅤ<img src="img/nosotros/comunidad.png" class="nosotros-img" alt="Comunidad">
+            </div>
+            <div class="col-md-6 p-4 ps-md-0">
+              <h5 class="mt-0 texto-amarillo">Una Gran Comunidad</h5>
+              <p class="texto-amarillo" style="font-size: 14px;">Hacemos todo lo posible por tener una comunidad bien establecida y simpática.
+              <br>Nos preocupamos tanto del ámbiente dentro de nuestra comunidad, como de leer las sugerencias/reclamos que puedan surgir de aquí mismo.
+              <br>Sabemos que la comunidad nos hace a nosotros, a la vez que, nosotros hacemos la comunidad. 
+              <br>¡Así que cuidemosla!</div>
+          </div>
+        <!---------- Fin Sobre Nosotros ---------->
 
         <!---------- Modal ---------->
         <div class="modal fade modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"

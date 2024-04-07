@@ -4,7 +4,7 @@
 /* Ajustes Predeterminados para Toda la Página. */
 .root-principal {
     font-family: 'Tilt Neon';
-    font-size: 20px;
+    font-size: 17px;
 }
 
 /* Creamos la clase Ocultar, para efectos estéticos. */
@@ -45,6 +45,11 @@ hr.separador-2 {
     color: #ffcc00 !important;
 }
 
+/* Cubrimos el <p>. */
+.texto-amarillo p{
+    color: #ffcc00 !important;
+}
+
 /* ----------------------------------------------------------------------------------
                                    Fin CSS Principal
 -------------------------------------------------------------------------------------*/
@@ -57,7 +62,6 @@ hr.separador-2 {
 
 /* Color de Flex de Descuentos. */
 .site-header {
-    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -92,7 +96,7 @@ hr.separador-2 {
 
 /* Fondo del NavBar al Scrollear para Abajo */
 .navbar-scroll-bg {
-    background-color: orange;
+    background-color: #1e2648;
 }
 
 /* Color del Hover para el NavBar entero */
@@ -222,4 +226,24 @@ hr.separador-2 {
 
 /* ----------------------------------------------------------------------------------
                                    Fin CSS Footer
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------ CSS DE OTROS ARCHIVOS ------------------------------------ */
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Nosotros
+-------------------------------------------------------------------------------------*/
+
+/* Establecemos un tamaño predefinido a la imágen del Footer */
+.nosotros-img{
+    width: 300px;
+    height: 100px;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Nosotros
 -------------------------------------------------------------------------------------*/
