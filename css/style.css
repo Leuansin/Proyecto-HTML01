@@ -30,10 +30,15 @@ hr.separador-2 {
 
 /* Fondo de los Divs. */
 .bannerDIV {
-    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920');
+    background: url('img/bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }   
+
+/* Hacemos el texto blanco para mayor legibilidad. */
+.texto-color {
+    color: gainsboro !important;
+}
 
 /* Hacemos el texto blanco para mayor legibilidad. */
 .texto-amarillo {
@@ -42,7 +47,7 @@ hr.separador-2 {
 
 /* Cubrimos el <a>. */
 .texto-amarillo a{
-    color: #ffcc00 !important;
+    color: gainsboro !important;
 }
 
 /* Cubrimos el <p>. */
@@ -155,7 +160,7 @@ hr.separador-2 {
 
 /* Texto al medio del Carrusel */
 .modal-bg{
-    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920') !important;
+    background-image: url('bg.png') !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
@@ -163,7 +168,7 @@ hr.separador-2 {
 /* Cambiamos el background de los Botones */
 .btn-bg{
     color: #ffcc00 !important;
-    background: url('https://cdn1.epicgames.com/ue/product/Screenshot/Night-1920x1080-f152421feea096962104198b0378ebe7.png?resize=1&w=1920') !important;
+    background-image: url('bg.png') !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
@@ -176,6 +181,27 @@ hr.separador-2 {
 /* ----------------------------------------------------------------------------------
                                     CSS Cards
 -------------------------------------------------------------------------------------*/
+
+/* Clase para centrar las Cards */
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clase para centrar las Cards */
+.centro2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Elimina el float:left; del estilo inline de la card para que Flexbox funcione correctamente */
+.card {
+    width: 18rem;
+    margin: auto; /* Esto centra la card dentro del contenedor .centro si solo hay una card */
+}
 
 /* Creamos una clase que ubique el siguiente div a la izquierda y esté centrado */
 .SeparadorCards{
@@ -227,7 +253,6 @@ hr.separador-2 {
 /* ----------------------------------------------------------------------------------
                                    Fin CSS Footer
 -------------------------------------------------------------------------------------*/
-
 
 
 /* ------------------------------------ CSS DE OTROS ARCHIVOS ------------------------------------ */
