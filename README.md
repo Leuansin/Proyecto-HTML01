@@ -81,6 +81,8 @@ Todo esto se debe a que se planea utilizar el proyecto para un emprendimiento re
 07/04/2024
 - [Commit V0.7](https://github.com/Leuansin/Proyecto-HTML01/commit/2c2ef8a10d66179f5e9473e1f71d4828b5baed44) |  `Optimización e Implementación Lazy Loading`.
 07/04/2024
+- [Commit V0.8]([https://github.com/Leuansin/Proyecto-HTML01/commit/2c2ef8a10d66179f5e9473e1f71d4828b5baed44](https://github.com/Leuansin/Proyecto-HTML01/commit/8ba4e7105a2846908ae7c06f1063a67c495b950a)) |  `Inclusión de Funciones JS y Validaciones. `.
+  17/05/2024
 
 
 ### Programadores / Créditos
