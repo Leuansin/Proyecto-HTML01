@@ -1,0 +1,290 @@
+/* ----------------------------------------------------------------------------------
+                                    CSS Principal
+-------------------------------------------------------------------------------------*/
+/* Estilo del mensaje para Consumo */
+.consumo-message {
+    color: green;
+    font-size: 17px;
+}
+
+/* Estilo del mensaje queda Error */
+.error-mesage {
+    color: red;
+    font-size: 17px;
+}
+
+/* Ajustes Predeterminados para Toda la Página. */
+.root-principal {
+    font-family: 'Tilt Neon';
+    font-size: 17px;
+}
+
+/* Creamos la clase Ocultar, para efectos estéticos. */
+.ocultar{
+    display: none !important;
+}
+
+/* Separador estético para distinguir entre Divs. */
+hr.separador {
+    background-color: #ffcc00;
+    border-top: 8px solid #ffcc00;
+    border-radius: 5px;
+    border-color: #ffcc00;
+}
+
+/* Separador estético en el Card. */
+hr.separador-2 {
+    background-color: white;
+    border-top: 8px solid white;
+    border-radius: 5px;
+    border-color: white;
+}
+
+/* Fondo de los Divs. */
+.bannerDIV {
+    background: url('img/bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+/* Hacemos el texto blanco para mayor legibilidad. */
+.texto-color {
+    color: gainsboro !important;
+}
+
+/* Hacemos el texto blanco para mayor legibilidad. */
+.texto-amarillo {
+    color: #ffcc00 !important;
+}
+
+/* Cubrimos el <a>. */
+.texto-amarillo a{
+    color: gainsboro !important;
+}
+
+/* Cubrimos el <p>. */
+.texto-amarillo p{
+    color: #ffcc00 !important;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Principal
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Header
+-------------------------------------------------------------------------------------*/
+
+/* Color de Flex de Descuentos. */
+.site-header {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Fuente del Flex de Descuentos. */
+.site-header-fuente {
+    font-family: 'Tilt Neon';
+    font-size: 16px;
+}
+
+/* ID para manejar la transición del navbar al scrollear para abajo en la Página */
+#site-header-scroll {
+    transition: top 0.3s;
+    /* Agregamos una transición suave para el cambio de posición */
+}
+
+/* Estilo para ocultar el navbar */
+#site-header-scroll.headeris-hidden {
+    top: -100px;
+    /* Mover el navbar fuera de la pantalla */
+}
+
+/* ----------------------------------------------------------------------------------
+                                    Fin CSS Header
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS NavBar
+-------------------------------------------------------------------------------------*/
+
+/* Fondo del NavBar al Scrollear para Abajo */
+.navbar-scroll-bg {
+    background-color: #1e2648;
+}
+
+/* Color del Hover para el NavBar entero */
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+    /* Color del Hover para el NavBar */
+}
+
+/* Botón de Comprar Entrada. Utilizamos !Important para sobre-escribir en el .css de BootStrap. */
+.btn-warning {
+    --bs-btn-color: black !important;
+    --bs-btn-border-color: orange !important;
+    --bs-btn-hover-color: #fff !important;
+    --bs-btn-hover-bg: orange !important;
+    --bs-btn-hover-border-color: orange !important;
+    --bs-btn-focus-shadow-rgb: 255, 165, 0 !important;
+    --bs-btn-active-color: #fff !important;
+    --bs-btn-active-bg: orange !important;
+    --bs-btn-active-border-color: orange !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+    --bs-btn-disabled-color: orange !important;
+    --bs-btn-disabled-bg: transparent !important;
+    --bs-btn-disabled-border-color: orange !important;
+    --bs-gradient: none !important;
+}
+
+/* Creamos una clase especial para organizar las páginas(items) del NavBar */
+.ubicacion-secciones-navbar {
+    margin-right: 10rem
+}
+
+/* ----------------------------------------------------------------------------------
+                                    Fin CSS NavBar
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Carrusel
+-------------------------------------------------------------------------------------*/
+
+/* Texto al medio del Carrusel */
+.carousel-caption {
+    bottom: 40rem !important;
+}
+
+/* ----------------------------------------------------------------------------------
+                                    Fin CSS Carrusel
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Modal
+-------------------------------------------------------------------------------------*/
+
+/* Texto al medio del Carrusel */
+.modal-bg{
+    background-image: url('bg.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/* Cambiamos el background de los Botones */
+.btn-bg{
+    color: #ffcc00 !important;
+    background-image: url('bg.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Modal
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Cards
+-------------------------------------------------------------------------------------*/
+
+.opaco {
+    opacity: 0.5;
+}
+
+/* Clase para centrar las Cards */
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clase para centrar las Cards */
+.centro2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Elimina el float:left; del estilo inline de la card para que Flexbox funcione correctamente */
+.card {
+    width: 18rem;
+    margin: auto; /* Esto centra la card dentro del contenedor .centro si solo hay una card */
+}
+
+/* Creamos una clase que ubique el siguiente div a la izquierda y esté centrado */
+.SeparadorCards{
+    float: left !important;
+    text-align: center !important;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Cards
+-------------------------------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------------------------
+                                     CSS FAQ
+-------------------------------------------------------------------------------------*/
+
+/* Clases creadas para cambiar el Background del Acordeón */
+.accordion-header{
+    background-color: #1e2648 !important;
+}
+
+.accordion-body {
+    background-color: #1e2648 !important;
+}
+
+.accordion-button{
+    background-color: #1e2648 !important;
+}
+/* Fin Clases creadas para cambiar el Background del Acordeón */
+
+/* ----------------------------------------------------------------------------------
+                                     Fin CSS FAQ
+-------------------------------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Footer
+-------------------------------------------------------------------------------------*/
+
+/* Establecemos un tamaño predefinido a la imágen del Footer */
+.footer-img{
+    width: 100px;
+    height: 100px;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Footer
+-------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------ CSS DE OTROS ARCHIVOS ------------------------------------ */
+
+
+
+/* ----------------------------------------------------------------------------------
+                                    CSS Nosotros
+-------------------------------------------------------------------------------------*/
+
+/* Establecemos un tamaño predefinido a la imágen del Footer */
+.nosotros-img{
+    width: 300px;
+    height: 100px;
+}
+
+/* ----------------------------------------------------------------------------------
+                                   Fin CSS Nosotros
+-------------------------------------------------------------------------------------*/
