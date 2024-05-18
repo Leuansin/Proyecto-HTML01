@@ -1,6 +1,18 @@
 /* ----------------------------------------------------------------------------------
                                     CSS Principal
 -------------------------------------------------------------------------------------*/
+/* Estilo del mensaje para Consumo */
+.consumo-message {
+    color: green;
+    font-size: 17px;
+}
+
+/* Estilo del mensaje queda Error */
+.error-mesage {
+    color: red;
+    font-size: 17px;
+}
+
 /* Ajustes Predeterminados para Toda la Página. */
 .root-principal {
     font-family: 'Tilt Neon';
@@ -181,6 +193,10 @@ hr.separador-2 {
 /* ----------------------------------------------------------------------------------
                                     CSS Cards
 -------------------------------------------------------------------------------------*/
+
+.opaco {
+    opacity: 0.5;
+}
 
 /* Clase para centrar las Cards */
 .centro {

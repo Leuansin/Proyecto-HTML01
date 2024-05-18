@@ -53,8 +53,7 @@
             <div class="container">
                 <div class="row">
                     <div class="d-flex p-2">
-                        <strong class="texto-amarillo">¡Aprovecha Nuestros Descuentos! -> ¡35% DCTO En Las
-                            Entradas!
+                        <strong class="texto-amarillo">Próximo Torneo: Rocket League - 2v2
                         </strong>
                     </div>
                 </div>
@@ -130,14 +129,22 @@
         <hr class="separador">
         <!-- Fin Separador -->
 
-        <form class="row g-3 needs-validation texto-amarillo" style="text-align: center;" novalidate>
+        <!-- Formulario de Contácto -->
+        <form class="row g-3 needs-validation texto-amarillo" id="miFormulario" style="text-align: center;" novalidate>
             <div class="col-md-3">
-                <label for="validationCustom01" class="form-label">Primer Nombre</label>
-                <input type="text" class="form-control modal-bg texto-amarillo" id="validationCustom01" value="Evan" required>
+                <label for="validationCustom01 nombre" class="form-label">Primer Nombre</label>
+                <input type="text" class="form-control modal-bg texto-amarillo nombre" id="validationCustom01 nombre" value="Evan" required>
+               
+                <!-- Mensaje de validación sin función -->
                 <div class="valid-feedback">
                     ¡Todo En Orden!
                 </div>
+                
+                <!-- Mensaje de validación con función en JS -->
+                <span id="nombreError" class="error-message"></span>
             </div>
+
+            <!-- Aca no es necesaria la validación con función, ya que es Apellido, solo se utilizará la de Boostrap. -->
             <div class="col-md-3">
                 <label for="validationCustom02" class="form-label">Apellido</label>
                 <input type="text" class="form-control modal-bg texto-amarillo" id="validationCustom02" value="Rockefeller" required>
@@ -145,6 +152,8 @@
                     ¡Todo En Orden!
                 </div>
             </div>
+
+
             <div class="col-md-4">
                 <label for="validationCustomUsername" class="form-label">Nombre de Usuario</label>
                 <div class="input-group has-validation">
@@ -156,28 +165,45 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3">
-                <label for="validationCustom03" class="form-label">Correo Electrónico</label>
-                <input type="text" class="form-control modal-bg texto-color" id="validationCustom03" required>
+                <label for="validationCustom03 email" class="form-label">Correo Electrónico</label>
+                <input type="text email" class="form-control modal-bg texto-color email" id="validationCustom03 email" required>
+                
+                <!-- Validación sin función -->
                 <div class="invalid-feedback">
                     Favor escribir un correo electrónico.
                 </div>
+
+                <!-- Validación con Función JS -->
+                <span id="emailError" class="error-message"></span>
             </div>
+
+
+
             <div class="col-md-3">
                 <label for="validationCustom03" class="form-label">Telefóno (Opcional)</label>
                 <input type="text" class="form-control modal-bg texto-color">
             </div>
+
+            <!-- Validaremos que tenga mínimo 6 carácteres el formulario antes de poder ser enviado. -->
             <div class="col-md-8">
-                <label for="validationCustom05" class="form-label">Escribe Aquí tu Mensaje:</label>
-                <input type="text" class="form-control modal-bg texto-amarillo" id="validationCustom05" required>
+                <label for="validationCustom05 mensajecontacto" class="form-label">Escribe Aquí tu Mensaje:</label>
+                <input type="text mensajecontacto" class="form-control modal-bg texto-amarillo mensajecontacto" id="validationCustom05 mensajecontacto" required>
                 <div class="invalid-feedback">
                     Favor escribe tu problema.
                 </div>
+
+                <span id="mensajecontactoError" class="error-message"></span>
+
+
             </div>
             <div class="col-12">
                 <button class="btn btn-primary modal-bg texto-color" type="submit">¡Enviar Solicitud! </button>
             </div>
         </form>
+
+        <span id="mostrarConsumo" class="consumo-message"></span>
         <!---------- Fin Contacto ---------->
 
         <!---------- Modal ---------->
@@ -366,28 +392,26 @@
         </div>
         <!-------- Fin Footer -------->
 
-
-    <!-- Clases que si se colocan en el código, se desordena mucho -->
-    <!-- Clase para activar el "Ver Premios"-->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Fin Clase para activar el "Ver Premios"-->
-    <!-- Fin Clases que no se colocan en el orden por estética -->
     <!---------- Aquí Finaliza el Div Root-Principal ---------->
 </body>
 
 <!---------- Scripts de Funcionalidades ---------->
+<!-- Script Anti F12 , CTRL y Mouse Derecho --
+<script>
+    document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey) {
+            event.preventDefault();
+        }
+        if (event.keyCode == 123) {
+            event.preventDefault();
+        }
+    });
+
+    document.addEventListener('contextmenu',
+        event => event.preventDefault()
+    );
+</script>
+-->
 
 <!-- Script para Automatizar el LazyLoading -->
 <script>
@@ -422,6 +446,9 @@
     })()
 </script>
 <!-- Fin de Script de verificación de Formulario -->
+
+<!-- Script para incluir el JS, se hace aquí para dejar que el DOM cargue completamente primero. -->
+<script src="js/funciones.js"></script>
 
 <!-- Script para mostrar el NavBar al Scrollear -->
 <script>
